@@ -1,0 +1,43 @@
+.weights {
+  position: absolute;
+  text-align: center;
+  font-size: 8px;
+}
+
+@for $i from 1 through 10 {
+  $weight: $i * 20px;
+  $border: $i * 10px;
+
+  .triangle-#{$i} {
+    width: $weight;
+    height: $border;
+    line-height: $border;
+    z-index: 2;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-bottom: $border solid #F4D03F;
+      border-left: $border solid transparent;
+      border-right: $border solid transparent;
+    }
+  }
+
+  .rectangle-#{$i} {
+    width: $weight;
+    height: $border;
+    line-height: $border;
+    background: #229954;
+  }
+
+  .circle-#{$i} {
+    width: $weight;
+    height: $weight;
+    line-height: $weight;
+    background: #3498DB;
+    border-radius: 50%;
+  }
+}

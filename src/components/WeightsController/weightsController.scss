@@ -1,0 +1,9 @@
+.weights-controller {
+  height: 400px;
+  display: flex;
+
+  &--left, &--right {
+    flex: 1;
+    position: relative;
+  }
+}
